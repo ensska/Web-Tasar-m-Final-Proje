@@ -1,0 +1,273 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
+    transition: all 0.5s ease;
+    line-height: 1.6;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.aktif-modal {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-kutu {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    position: relative;
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.aktif-modal .modal-kutu {
+    transform: scale(1);
+}
+
+.kapat-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.kapat-btn:hover {
+    color: #e74c3c;
+}
+
+#tamamBtn {
+    background-color: #3498db;
+    color: white;
+    margin-top: 15px;
+    padding: 10px 30px;
+}
+
+#tamamBtn:hover {
+    background-color: #2980b9;
+}
+
+nav {
+    background-color: #2c3e50;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding-bottom: 5px;
+    transition: 0.3s;
+}
+
+nav a.aktif {
+    border-bottom: 3px solid #e74c3c;
+    color: #e74c3c !important;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+#temaButonu { 
+    background-color: #e67e22; 
+    color: white; 
+}
+
+body.tema-koyu { 
+    background-color: #1a1a1a; 
+    color: #e0e0e0; 
+}
+
+body.tema-koyu nav { 
+    background-color: #000; 
+}
+
+body.tema-koyu .kart, 
+body.tema-koyu .modal-kutu { 
+    background-color: #2d2d2d; 
+    color: white; 
+}
+
+body.tema-doga { 
+    background-color: #e8f5e9; 
+    color: #1b5e20; 
+}
+
+body.tema-doga nav { 
+    background-color: #2e7d32; 
+}
+
+body.tema-doga button { 
+    background-color: #81c784; 
+    color: #003300; 
+}
+
+main { 
+    max-width: 1100px; 
+    margin: 40px auto; 
+    padding: 0 20px; 
+}
+
+.kart { 
+    background: white; 
+    padding: 30px; 
+    border-radius: 15px; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+    margin-bottom: 30px; 
+    transition: 0.5s; 
+}
+
+.etkilesimli-resim { 
+    width: 100%; 
+    max-width: 600px; 
+    border-radius: 10px; 
+    cursor: pointer; 
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+    display: block; 
+    margin: 20px auto; 
+}
+
+.buyumus { 
+    transform: scale(1.2); 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3); 
+    z-index: 10; 
+    position: relative; 
+}
+
+.begen-alani { 
+    text-align: center; 
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+    color: white; 
+    padding: 40px; 
+    border-radius: 15px; 
+}
+
+#begenBtn { 
+    background-color: white; 
+    color: #764ba2; 
+    font-size: 1.2rem; 
+    margin-top: 10px; 
+}
+
+.hakkinda-container { 
+    display: flex; 
+    align-items: center; 
+    gap: 30px; 
+}
+
+.hakkinda-img { 
+    flex: 1; 
+    width: 100%; 
+    border-radius: 10px; 
+}
+
+.hakkinda-text { 
+    flex: 1; 
+}
+
+#aktiviteListesi { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 15px; 
+    list-style: none; 
+    padding: 0; 
+}
+
+#aktiviteListesi li { 
+    background: #ecf0f1; 
+    padding: 20px; 
+    border-radius: 10px; 
+    text-align: center; 
+    font-weight: bold; 
+    cursor: help; 
+    transition: 0.3s; 
+    color: #333; 
+}
+
+#aktiviteListesi li:hover { 
+    background: #3498db; 
+    color: white; 
+    transform: translateY(-5px); 
+}
+
+#bilgiKutusu { 
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    background-color: #2c3e50; 
+    color: white; 
+    padding: 15px 25px; 
+    border-radius: 50px; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); 
+    font-size: 1.1rem; 
+    animation: slideIn 0.3s ease; 
+}
+
+@keyframes slideIn { 
+    from { transform: translateY(100px); opacity: 0; } 
+    to { transform: translateY(0); opacity: 1; } 
+}
+
+input, textarea { 
+    width: 100%; 
+    padding: 12px; 
+    margin: 8px 0; 
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    box-sizing: border-box; 
+}
+
+button[type="submit"] { 
+    background-color: #27ae60; 
+    color: white; 
+    width: 100%; 
+}

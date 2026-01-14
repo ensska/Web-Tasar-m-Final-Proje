@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortCity - Keşfet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div style="color:white; font-weight:bold; font-size:1.5rem;">PortCity ⚓</div>
+        <ul>
+            <li><a href="index.html" class="aktif">Ana Sayfa</a></li>
+            <li><a href="about.html">Hakkımızda</a></li>
+            <li><a href="services.html">Hizmetler</a></li>
+            <li><a href="contact.html">İletişim</a></li>
+        </ul>
+        <button id="temaButonu">🎨 Tema Değiştir</button>
+    </nav>
+
+    <main>
+        <section class="kart" style="text-align:center;">
+            <h1>PortCity'ye Hoş Geldiniz</h1>
+            <p>Denizin mavisi ve tarihin dokusu burada buluşuyor.</p>
+            
+            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80" 
+                 alt="PortCity Manzara" 
+                 id="etkilesimliResim" 
+                 class="etkilesimli-resim">
+            
+            <p style="color:#777; font-size:0.9rem;">(Görsele tıklayarak yakınlaştırabilirsiniz)</p>
+        </section>
+
+        <section class="begen-alani">
+            <h2>Bu projeyi beğendiniz mi?</h2>
+            <p>Bize destek olmak için aşağıdaki butona tıklayın.</p>
+            <button id="begenBtn">👍 Beğen</button>
+            <p style="margin-top:10px; font-size:1.2rem;">Toplam Beğeni: <strong id="sayac">0</strong></p>
+        </section>
+    </main>
+
+    <div id="karsilamaModal" class="modal-overlay">
+        <div class="modal-kutu">
+            <span id="kapatX" class="kapat-btn">&times;</span>
+            <h2>Hoş Geldiniz! 👋</h2>
+            <p>PortCity Tanıtım Sitesine Hoş Geldiniz.</p>
+            <p style="font-size: 0.9rem; color: #666;">Keyifli gezintiler dileriz.</p>
+            <button id="tamamBtn">Siteye Gir</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

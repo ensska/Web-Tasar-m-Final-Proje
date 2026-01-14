@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortCity - İletişim</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div style="color:white; font-weight:bold; font-size:1.5rem;">PortCity ⚓</div>
+        <ul>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="about.html">Hakkımızda</a></li>
+            <li><a href="services.html">Hizmetler</a></li>
+            <li><a href="contact.html" class="aktif">İletişim</a></li>
+        </ul>
+        <button id="temaButonu">🎨 Tema Değiştir</button>
+    </nav>
+
+    <main>
+        <div class="kart" style="max-width: 600px; margin: 0 auto;">
+            <h2 style="text-align:center;">Bize Ulaşın</h2>
+            <p style="text-align:center;">Sorularınız için aşağıdaki formu doldurabilirsiniz.</p>
+            
+            <form id="iletisimFormu">
+                <label>Adınız Soyadınız:</label>
+                <input type="text" id="ad" placeholder="Örn: Ahmet Yılmaz">
+
+                <label>E-posta Adresiniz:</label>
+                <input type="email" id="mail" placeholder="ornek@email.com">
+
+                <label>Mesajınız:</label>
+                <textarea id="mesaj" rows="5" placeholder="Mesajınızı buraya yazın..."></textarea>
+
+                <button type="submit">Gönder 🚀</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
